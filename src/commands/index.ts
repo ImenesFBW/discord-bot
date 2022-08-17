@@ -131,6 +131,10 @@ import { noHello } from './memes/noHello';
 import { vatsimEvents } from './utils/vatsimEvents';
 import { flights } from './utils/flights';
 import { docsearch } from './general/docsearch';
+import { dlss } from './support/dlss';
+import { temporarycommandedit } from './moderation/temporaryCommandEdit';
+import { temporarycommand } from './general/temporaryCommand';
+import { yourControls } from './general/yourControls';
 import { randomFlight } from './utils/randomflight';
 
 const commands: CommandDefinition[] = [
@@ -265,6 +269,10 @@ const commands: CommandDefinition[] = [
     vatsimEvents,
     flights,
     docsearch,
+    dlss,
+    temporarycommandedit,
+    temporarycommand,
+    yourControls,
     randomFlight,
 ];
 
