@@ -1,7 +1,7 @@
 import { DMChannel, TextChannel } from 'discord.js';
 import { makeEmbed } from '../lib/embed';
 import Logger from '../lib/logger';
-import { Channels } from '../constants';
+import { Roles, Channels } from '../constants';
 
 module.exports = {
     event: 'messageCreate',
@@ -15,19 +15,23 @@ module.exports = {
 
         if (scamLogs && msg.content.toLowerCase().includes('@everyone') && msg.author.bot === false && !(msg.channel instanceof DMChannel)) {
             const excludedRoles = [
-                'Admin Team',
-                'Moderation Team',
-                'Development Team',
-                'Media Team',
-                'Community Support',
-                'FBW Emeritus',
+                Roles.ADMIN_TEAM,
+                Roles.MODERATION_TEAM,
+                Roles.DEVELOPMENT_TEAM,
+                Roles.MEDIA_TEAM,
+                Roles.COMMUNITY_SUPPORT,
+                Roles.FBW_EMERITUS,
             ];
             let hasRole = false;
-            excludedRoles.forEach((findrole) => {
-                if (msg.member.roles.cache.some((role) => role.name === findrole)) {
-                    hasRole = true;
-                }
-            });
+            try {
+                excludedRoles.forEach((findrole) => {
+                    if (msg.member.roles.cache.some((role) => role.id === findrole)) {
+                        hasRole = true;
+                    }
+                });
+            } catch (e) {
+                Logger.error(e);
+            }
             // @ts-ignore
             if (hasRole === true) {
                 const allowedEmbed = makeEmbed({
@@ -41,7 +45,7 @@ module.exports = {
                     fields: [
                         {
                             name: 'User:',
-                            value: `<@${msg.author.id}>`,
+                            value: `${msg.author}`,
                         },
                         {
                             name: 'Channel:',
@@ -69,7 +73,7 @@ module.exports = {
                             name: msg.author.tag,
                             iconURL: msg.author.displayAvatarURL({ dynamic: true }),
                         },
-                        description: `DM was not sent to <@${msg.author.id}>.`,
+                        description: `DM was not sent to ${msg.author.id}.`,
                     });
 
                     await scamLogs.send({ embeds: [noDMEmbed] });
@@ -85,7 +89,7 @@ module.exports = {
                     fields: [
                         {
                             name: 'User:',
-                            value: `<@${msg.author.id}>`,
+                            value: `${msg.author}`,
                         },
                         {
                             name: 'Channel:',

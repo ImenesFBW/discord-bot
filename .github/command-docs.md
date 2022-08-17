@@ -6,7 +6,7 @@
 |:---------------|:--------------------------------------------------------------------------------------|:-------------------------------------------------------|
 | .adirs         | Display help with ADIRS alignment                                                     | ---                                                    |
 | .afloor        | Provides a link to the Alpha Floor Tool-Tip                                           | ---                                                    |
-| .airframe      | Provides a link to the updated Simbrief airframe                                      | .simbrief                                              |
+| .airframe      | Provides a link to the updated Simbrief airframe                                      | ---                                                    |
 | .assistance    | Explains to the user why assistance options should be disabled                        | .assi <br> .as                                         |
 | .atc           | Provides a link to the cFMS special notes section.                                    | ---                                                    |
 | .audio         | Provides support information about A32NX audio configuration                          | ---                                                    |
@@ -30,7 +30,7 @@
 | .remotemcdu    | Provides a link to the FlyByWire remote MCDU feature guide                            | .mcdu <br> .remote                                     |
 | .rs            | Provides a link to the recommended settings docs guide                                | ---                                                    |
 | .screens       | Display help with avionics                                                            | .screen                                                |
-| .import        | Shows how to use SimBrief integration                                                 | .integration <br> .integ                               |
+| .import        | Shows how to use SimBrief integration                                                 | .integration <br> .integ <br> .simbrief                |
 | .sop           | Displays first page of SOP and provides PDF download                                  | ---                                                    |
 | .waypoint      | Provides a link to the a32nx data management guid                                     | .storedwaypoint <br> .datamanagement                   |
 | .takeoff       | Provides an explanation as to why there is no takeoff calculator for V-speeds or FLEX | .calculator <br> .perf                                 |
@@ -56,8 +56,9 @@
 | .ctd            | Crash to Desktop                                                                  | .crash                                             |
 | .cursor         | Displays steps to help with EFB cursor focus issue                                | .efbfocus <br> .unfocus                            |
 | .deadzones      | Display help with controller deadzones                                            | .deadzone <br> .dz                                 |
-| .dx12           | Explaination for the current state of MSFS DirectX12 support                      | ---                                                |
+| .dx12           | Explanation for the current state of MSFS DirectX12 support                       | ---                                                |
 | .discontinuity  | Link to docs about discontinuities                                                | .disco                                             |
+| .dlss           | Explanation of the DLSS option in the MSFS graphics settings.                     |                                                    |
 | .fdr            | Information on how to provide fdr files                                           | ---                                                |
 | .hud            | How to disable in-game HUD                                                        | .logs                                              |
 | .installerlogs  | Provides an explanation on how to receive installer error logs for support        | ---                                                |
@@ -76,38 +77,43 @@
 
 ### General
 
-| Command      | Description                                                                                                    | Alias                    |
-|:-------------|:---------------------------------------------------------------------------------------------------------------|:-------------------------|
-| .donate      | Provides a link to the open collective                                                                         | ---                      |
-| .goldenrules | Provides an image describing the golden rules an Airbus pilot should follow                                    | .golden <br> .gr         |
-| .headwind    | Provides link to the Headwind Discord server                                                                   | .hw                      |
-| .installer   | Provides link to the new installer                                                                             | ---                      |
-| .latlong     | Provides a cheat sheet for conversion between Latitude and longitude coordinates between short and long format | .llfix                   |
-| .msfsdisc    | Provides link to Microsoft Flight Simulator discord server                                                     | .fsdisc <br> .msfsdiscord|
-| .qa          | Links to the Quality Assurance docs page                                                                       | ---                      |
-| .roadmap     | FBW Roadmap                                                                                                    | .goals                   |
-| .salty       | Provides link to salty discord server                                                                          | .sal <br> .ninjo         |
-| .synaptic    | Provides link to synaptic discord server                                                                       | .syn                     |
-| .translate   | Provides information on how to contribute to various FlyByWire translation efforts                             | ---                      |
-| .when        | Explain the absence of release dates or ETAs                                                                   | ---                      |
-| .thumb       | Answers the big question, will it have FEATURE?                                                                | .willithave              |
-| .xbox        | Short response + link to NOTAM for xbox marketplace                                                            | .xboxmarketplace         |
+| Command           | Description                                                                                                             | Alias                               |
+|:------------------|:------------------------------------------------------------------------------------------------------------------------|:------------------------------------|
+| .docsearch        | Provides a link to the FlyByWire documentation, either a general link, or a link for a specific search                  | .documentation <br> .docs <br> .doc |
+| .donate           | Provides a link to the open collective                                                                                  | ---                                 |
+| .goldenrules      | Provides an image describing the golden rules an Airbus pilot should follow                                             | .golden <br> .gr                    |
+| .headwind         | Provides link to the Headwind Discord server                                                                            | .hw                                 |
+| .installer        | Provides link to the new installer                                                                                      | ---                                 |
+| .latlong          | Provides a cheat sheet for conversion between Latitude and longitude coordinates between short and long format          | .llfix                              |
+| .msfsdisc         | Provides link to Microsoft Flight Simulator discord server                                                              | .fsdisc <br> .msfsdiscord           |
+| .qa               | Links to the Quality Assurance docs page                                                                                | ---                                 |
+| .roadmap          | FBW Roadmap                                                                                                             | .goals                              |
+| .salty            | Provides link to salty discord server                                                                                   | .sal <br> .ninjo                    |
+| .synaptic         | Provides link to synaptic discord server                                                                                | .syn                                |
+| .temporarycommand | Runs a temporary command created by the Moderators and can list them. These are temporary commands for simple messages. | .tempcommand <br> .tc               |
+| .translate        | Provides information on how to contribute to various FlyByWire translation efforts                                      | ---                                 |
+| .when             | Explain the absence of release dates or ETAs                                                                            | ---                                 |
+| .thumb            | Answers the big question, will it have FEATURE?                                                                         | .willithave                         |
+| .xbox             | Short response + link to NOTAM for xbox marketplace                                                                     | .xboxmarketplace                    |
+| .yourcontrols     | Provides link to the YourControls discord                                                                               | .yc                                 |
 
 ### Utilities
 
-| Command         | Description                                                                            | Alias                                    |
-|:----------------|:---------------------------------------------------------------------------------------|:-----------------------------------------|
-| .avatar         | Shows the selected user's avatar                                                       | .av                                      |
-| .birthday       | Handles adding & removing user birthdays                                               | ---                                      |
-| .count          | counts in the count thread                                                             | ---                                      |
-| .help           | Sends a list of available commands to the user                                         | ---                                      |
-| .membercount    | Lists the guild's current amount of members                                            | ---                                      |
-| .metar          | Provides the METAR report of the requested airport                                     | ---                                      |
-| .ping           | Send back a message                                                                    | ---                                      |
-| .roleinfo       | Lists the guild's current amount of members                                            | ---                                      |
-| .station        | Provides station information                                                           | ---                                      |
-| .wa             | Queries the Wolfram Alpha API                                                          | .calc <br> .ask                          |
-| .zulu           | Get the current time at a given UTC-offset timezone                                    | ---                                      |
+| Command      | Description                                            | Alias                                                          |
+|:-------------|:-------------------------------------------------------|:---------------------------------------------------------------|
+| .avatar      | Shows the selected user's avatar                       | .av                                                            |
+| .birthday    | Handles adding & removing user birthdays               | ---                                                            |
+| .count       | counts in the count thread                             | ---                                                            |
+| .events      | Show a list of upcoming VATSIM events.                 | .event <br> .ev <br> .vatsimevents <br> .vatevents <br> .vatev |
+| .help        | Sends a list of available commands to the user         | ---                                                            |
+| .liveflights | Get the current live flights for FlyByWire Simulations | .flights <br> .flight                                          |
+| .membercount | Lists the guild's current amount of members            | ---                                                            |
+| .metar       | Provides the METAR report of the requested airport     | ---                                                            |
+| .ping        | Send back a message                                    | ---                                                            |
+| .roleinfo    | Lists the guild's current amount of members            | ---                                                            |
+| .station     | Provides station information                           | ---                                                            |
+| .wa          | Queries the Wolfram Alpha API                          | .calc <br> .ask                                                |
+| .zulu        | Get the current time at a given UTC-offset timezone    | ---                                                            |
 
 ### Memes
 
@@ -142,17 +148,18 @@
 
 ### Moderation
 
-| Command         | Description                                                                            | Alias                                    |
-|:----------------|:---------------------------------------------------------------------------------------|:-----------------------------------------|
-| .ban            | ---                                                                                    | ---                                      |
-| .deletewarn     | Deletes a users warning                                                                | .delwarn <br> .deletewarning             |
-| .faq            | Sends the FAQ                                                                          | ---                                      |
-| .roleassignment | Sends the role assignment messages                                                     | ---                                      |
-| .rules          | Sends the rules                                                                        | ---                                      |
-| .timeout        | ---                                                                                    | ---                                      |
-| .unban          | ---                                                                                    | ---                                      |
-| .untimeout      | ---                                                                                    | .removetimeout                           |
-| .warn           | Warns a user                                                                           | ---                                      |
-| .warnings       | Lists a users warnings                                                                 | .listwarn <br> .listwarnings <br> .warns |
-| .welcome        | Sends the welcome                                                                      | ---                                      |
-| .whois          | Provides an embedded message with information about the mentioned user                 | ---                                      |
+| Command               | Description                                                                                             | Alias                                      |
+|:----------------------|:--------------------------------------------------------------------------------------------------------|:-------------------------------------------|
+| .ban                  | ---                                                                                                     | ---                                        |
+| .deletewarn           | Deletes a users warning                                                                                 | .delwarn <br/> .deletewarning              |
+| .faq                  | Sends the FAQ                                                                                           | ---                                        |
+| .roleassignment       | Sends the role assignment messages                                                                      | ---                                        |
+| .rules                | Sends the rules                                                                                         | ---                                        |
+| .temporarycommandedit | Manage temporary commands, which are simple output commands to highlight temporary situations to users. | .tempcommandedit <br> .tcedit <br> .tcmod  |
+| .timeout              | ---                                                                                                     | ---                                        |
+| .unban                | ---                                                                                                     | ---                                        |
+| .untimeout            | ---                                                                                                     | .removetimeout                             |
+| .warn                 | Warns a user                                                                                            | ---                                        |
+| .warnings             | Lists a users warnings                                                                                  | .listwarn <br/> .listwarnings <br/> .warns |
+| .welcome              | Sends the welcome                                                                                       | ---                                        |
+| .whois                | Provides an embedded message with information about the mentioned user                                  | ---                                        |

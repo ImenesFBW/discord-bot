@@ -2,6 +2,22 @@
 
 Update <small>_ August 2022</small>
 
+- refactor: remove async/await from memes (17/08/2022)
+- feat: add YourControls discord server command (16/08/2022)
+- refactor: role constants in scam log (15/08/2022)
+- docs: added image from dlss command to assets folder (14/08/2022)
+- chore: add editorconfig (14/08/2022)
+- feat: add temporarycommandedit and temporarycommand (14/08/2022)
+- docs: cleanup newlines in command document (14/08/2022)
+- feat: add dlss command (12/08/2022)
+- refactor: simbrief import alias (12/08/2022)
+- feat: add docsearch command (10/08/2022)
+- ci: verify changelog in PR (10/08/2022)
+- feat: add live flights command (08/08/2022)
+- feat: add events command (08/08/2022)
+- refactor: command cleanup (08/08/2022)
+- fix: crash in scamlogs with non-existent roles (08/08/2022)
+- fix: mentions in multiple commands (08/08/2022)
 - feat: adds noHello (06/08/2022)
 - refactor: command-docs.md ordering (05/08/2022)
 - refactor: rename funnies directory to memes (05/08/2022)

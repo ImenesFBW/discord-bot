@@ -127,7 +127,14 @@ import { market } from './support/market';
 import { takeoffIssues } from './a32nx/takeoffissues';
 import { simbridge } from './support/simbridge';
 import { fma } from './a32nx/fma';
-import { noHello } from "./memes/noHello";
+import { noHello } from './memes/noHello';
+import { vatsimEvents } from './utils/vatsimEvents';
+import { flights } from './utils/flights';
+import { docsearch } from './general/docsearch';
+import { dlss } from './support/dlss';
+import { temporarycommandedit } from './moderation/temporaryCommandEdit';
+import { temporarycommand } from './general/temporaryCommand';
+import { yourControls } from './general/yourControls';
 
 const commands: CommandDefinition[] = [
     ping,
@@ -258,6 +265,13 @@ const commands: CommandDefinition[] = [
     simbridge,
     fma,
     noHello,
+    vatsimEvents,
+    flights,
+    docsearch,
+    dlss,
+    temporarycommandedit,
+    temporarycommand,
+    yourControls,
 ];
 
 const commandsObject: { [k: string]: CommandDefinition } = {};
