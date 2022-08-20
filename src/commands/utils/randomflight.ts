@@ -71,68 +71,93 @@ export const randomFlight: CommandDefinition = {
             'YSSY - YBTL', 'YBTL - YSSY', 'YMML - YBPN', 'YBPN - YMML',
             'YSSY - YBPN', 'YBPN - YSSY', 'YMML - YBHM', 'YBHM - YMML',
         ];
-        const random = europe.concat(northAmerica, africa, asia, australia);
+        const southAmerica = [
+            'SBRJ - SBSP', 'SBSP - SBRJ',
+            'SBRJ - SBGO', 'SBGO - SBRJ',
+            'SBRJ - SBGR', 'SBGR - SBRJ',
+            'SBRJ - SBPA', 'SBPA - SBRJ',
+            'SBRJ - SBBR', 'SBBR - SBRJ',
+            'SBRJ - SBKP', 'SBKP - SBRJ',
+        ];
+        const random = europe.concat(northAmerica, africa, asia, australia, southAmerica);
 
-        const randomFlight = (random[Math.floor(Math.random() * random.length)]);
-        const europanFlight = (europe[Math.floor(Math.random() * europe.length)]);
-        const naFlight = (northAmerica[Math.floor(Math.random() * northAmerica.length)]);
-        const africanFlight = (africa[Math.floor(Math.random() * africa.length)]);
-        const asianFlight = (asia[Math.floor(Math.random() * asia.length)]);
-        const australianFlight = (australia[Math.floor(Math.random() * australia.length)]);
+        const randomFlight = (random[Math.floor(Math.random() * random.length)]).split(' ');
+        const europanFlight = (europe[Math.floor(Math.random() * europe.length)]).split(' ');
+        const naFlight = (northAmerica[Math.floor(Math.random() * northAmerica.length)]).split(' ');
+        const africanFlight = (africa[Math.floor(Math.random() * africa.length)]).split(' ');
+        const asianFlight = (asia[Math.floor(Math.random() * asia.length)]).split(' ');
+        const australianFlight = (australia[Math.floor(Math.random() * australia.length)]).split(' ');
+        const saFlight = (southAmerica[Math.floor(Math.random() * southAmerica.length)]).split(' ');
 
-        const randomFlightSelected = randomFlight.split(' ');
-        const europanFlightSelected = europanFlight.split(' ');
-        const naFlightSelected = naFlight.split(' ');
-        const africanFlightSelected = africanFlight.split(' ');
-        const asianFlightSelected = asianFlight.split(' ');
-        const australianFlightSelected = australianFlight.split(' ');
-
+        ///change emoji ID to FBW server
         const randomFlightEmbed = makeEmbed({
             title: 'Random Flight',
             description: makeLines([
-                (randomFlight),
+                '\u200b',
+                '\u200b \u200b \u200b \u200b <:pulldown:1010015265196617891><:pulllevel:1010015314257383514><:pullup:1010015293080338504>',
+                `\`${randomFlight[0]} - ${randomFlight[2]}\``,
                 ' ',
-                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${randomFlightSelected[0]}&dest=${randomFlightSelected[2]})`,
+                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${randomFlight[0]}&dest=${randomFlight[2]})`,
             ]),
         });
         const europeFlightEmbed = makeEmbed({
             title: 'Random European Flight',
             description: makeLines([
-                (europanFlight),
+                '\u200b',
+                '\u200b \u200b \u200b \u200b <:pulldown:1010015265196617891><:pulllevel:1010015314257383514><:pullup:1010015293080338504>',
+                `\`${europanFlight[0]} - ${europanFlight[2]}\``,
                 ' ',
-                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${europanFlightSelected[0]}&dest=${europanFlightSelected[2]})`,
+                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${europanFlight[0]}&dest=${europanFlight[2]})`,
             ]),
         });
         const northAmericaFlightEmbed = makeEmbed({
             title: 'Random North American Flight',
             description: makeLines([
-                (naFlight),
+                '\u200b',
+                '\u200b \u200b \u200b \u200b <:pulldown:1010015265196617891><:pulllevel:1010015314257383514><:pullup:1010015293080338504>',
+                `\`${naFlight[0]} - ${naFlight[2]}\``,
                 ' ',
-                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${naFlightSelected[0]}&dest=${naFlightSelected[2]})`,
+                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${naFlight[0]}&dest=${naFlight[2]})`,
             ]),
         });
         const africaFlightEmbed = makeEmbed({
             title: 'Random African Flight',
             description: makeLines([
-                (africanFlight),
+                '\u200b',
+                '\u200b \u200b \u200b \u200b <:pulldown:1010015265196617891><:pulllevel:1010015314257383514><:pullup:1010015293080338504>',
+                `\`${africanFlight[0]} - ${africanFlight[2]}\``,
                 ' ',
-                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${africanFlightSelected[0]}&dest=${africanFlightSelected[2]})`,
+                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${africanFlight[0]}&dest=${africanFlight[2]})`,
             ]),
         });
         const asiaFlightEmbed = makeEmbed({
             title: 'Random Asian Flight',
             description: makeLines([
-                (asianFlight),
+                '\u200b',
+                '\u200b \u200b \u200b \u200b <:pulldown:1010015265196617891><:pulllevel:1010015314257383514><:pullup:1010015293080338504>',
+                `\`${asianFlight[0]} - ${asianFlight[2]}\``,
                 ' ',
-                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${asianFlightSelected[0]}&dest=${asianFlightSelected[2]})`,
+                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${asianFlight[0]}&dest=${asianFlight[2]})`,
             ]),
         });
-        const australianFlightEmbed = makeEmbed({
+        const australiaFlightEmbed = makeEmbed({
             title: 'Random Australian Flight',
             description: makeLines([
-                (australianFlight),
+                '\u200b',
+                '\u200b \u200b \u200b \u200b <:pulldown:1010015265196617891><:pulllevel:1010015314257383514><:pullup:1010015293080338504>',
+                `\`${australianFlight[0]} - ${australianFlight[2]}\``,
                 ' ',
-                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${australianFlightSelected[0]}&dest=${australianFlightSelected[2]})`,
+                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${australianFlight[0]}&dest=${australianFlight[2]})`,
+            ]),
+        });
+        const southAmericaFlightEmbed = makeEmbed({
+            title: 'Random South American Flight',
+            description: makeLines([
+                '\u200b',
+                '\u200b \u200b \u200b \u200b <:pulldown:1010015265196617891><:pulllevel:1010015314257383514><:pullup:1010015293080338504>',
+                `\`${saFlight[0]} - ${saFlight[2]}\``,
+                ' ',
+                `Dispatch via [SimBrief](${SIMBRIEF_BASE_URL}${saFlight[0]}&dest=${saFlight[2]})`,
             ]),
         });
 
@@ -147,9 +172,11 @@ export const randomFlight: CommandDefinition = {
         } else if (query === 'asia' || query === 'as') {
             await msg.channel.send({ embeds: [asiaFlightEmbed] });
         } else if (query === 'australia' || query === 'au') {
-            await msg.channel.send({ embeds: [australianFlightEmbed] });
+            await msg.channel.send({ embeds: [australiaFlightEmbed] });
+        } else if (query === 'southamerica' || query === 'sa') {
+            await msg.channel.send({ embeds: [southAmericaFlightEmbed] });
         } else {
-            return msg.reply(`"${randomFlightSelected[0]}" is not a valid continent!`);
+            return msg.reply(`"${randomFlight[0]}" is not a valid continent!`);
         }
         return Promise.resolve();
     },
